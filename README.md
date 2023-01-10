@@ -206,7 +206,7 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 ## Propriedades
 
 | Propriedade |	Requerido |	Descrição |	Tipo |
-| :--- | :---: | :---: | :---: | :---: | 
+| :--- | :---: | :--- | :---: | 
 | key | YES | String key that identifies the owner | String |
 | type | YES | Indicates the authentication type, used to sign in the user | AuthenticationTypeEnum |
 | token | NO* | User token used to identity the application logged user. Used with external type only | String |
@@ -214,4 +214,4 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 | hostName | NO | Custom hostName used to connect to Blip Server | String |
 | useMtls | NO | Determines if the connection will use mTLS for avoid MITM attacks. Default: false | bool |
 | account | NO | Logged user account data | BlipChatAccountModel |
-style	NO	Custom chat style	BlipChatStyleModel
+| style | NO | Custom chat style | BlipChatStyleModel |
