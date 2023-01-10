@@ -217,3 +217,32 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 | useMtls | NO | Determines if the connection will use mTLS for avoid MITM attacks. Default: false | bool |
 | account | NO | Logged user account data | BlipChatAccountModel |
 | style | NO | Custom chat style | BlipChatStyleModel |
+
+* Required for external authentication type.
+
+## BlipChat Account
+| Property	Required	Description	Type
+| :--- | :---: | :--- | :---: | 
+| pushToken | NO | Logged user's device push notification Token | String |
+| fullName | NO | Logged user full name to be stored on Blip Account | String |
+| email | NO | Logged user email to be stored on Blip Account | String |
+| photoUri | NO | Logged user avatar uri to be stored on Blip Account | String |
+| encryptMessageContent | NO | Determines if the message content will be encrypted | bool |
+
+
+## BlipChat Style
+| Property	Required	Description	Type
+| :--- | :---: | :--- | :---: | 
+| primary | NO | Primary chat HEX color | String |
+| sentBubble | NO | Sent message bubble HEX color | String |
+| receivedBubble | NO | Received message bubble HEX color | String |
+| background | NO | Chat background HEX color | String |
+| overrideOwnerColors | NO | Determines if the clors sent in this object, will override the owner configuration colors. Default: false | bool |
+| showOwnerAvatar | NO | Determines if the owner avatar will be shown. Default: true | bool |
+| showUserAvatar | NO | Determines if the user avatar will be shown. Default: true | bool |
+
+##Authentication Type
+| Property | Description |
+| :--- | :--- |
+| plain | Plain text authentication method |
+| external | External authentication method. For this authentication type, is necessary to send token and issuer properties |
