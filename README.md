@@ -1,21 +1,28 @@
 # blip-chat-android
  
+ # Passo 1 
 ## Criando um projeto utilizando o SDK Blip Chat Android
 
-Crie um projeto utilizando como SDK mínimo API 23 do Android. Conforme Imagem 1 abaixo:
+Crie um projeto utilizando como SDK mínimo API 23 do Android. Conforme Imagem 1 abaixo. Caso já possua um projeto pule o passo 1. 
 
 ![alt text](https://github.com/fourtime/blip-chat-android/blob/main/imgs/1_-_CriandoProjeto.png)
 1 - Criando projeto
+
+# Passo 2
 
 Faça Download do arquivo zipado do projeto conforme Imagem 2 a seguir. Utilize o link abaixo para download: https://github.com/fourtime/blip-chat-android
 
 ![alt text](https://github.com/fourtime/blip-chat-android/blob/main/imgs/2_-_BaixandoArquivos.png)
 2 - Baixando Arquivos
 
+# Passo 3
+
 Descompacte o arquivo blip-chat-android-main.zip e copie as pastas descompactadas para dentro do seu projeto. A pasta flutter_blip_chat_sdk deve ficar na pasta root do seu projeto e a pasta android_blip_chat_sdk na pasta app do seu projeto. Conforme Imagem 3 abaixo:
 
 ![alt text](https://github.com/fourtime/blip-chat-android/blob/main/imgs/3_-_EstruturaDePastas.png)<br/>
 3 - Estrutura de Pastas do Projeto
+
+# Passo 4
 
 Volte para seu projeto no Android Studio no arquivo settings.gradle e adicione as seguintes linhas na propriedade repositories do seu arquivo, conforme abaixo:
 
@@ -63,6 +70,8 @@ rootProject.name = "TesteSDK"
 include ':app'
 include ':app:android_blip_chat_sdk'
 ```
+
+# Passo 5
 
 No arquivo build.gradle do seu app adicione o trecho abaixo acima da propriedade dependences:
 
@@ -159,6 +168,8 @@ dependencies {
 }
 ```
 
+# Passo 6
+
 Adicione a referência da BlipChatActivity no seu arquivo Manifest.xml conforme trecho abaixo:
 
 ```xml
@@ -169,6 +180,8 @@ Adicione a referência da BlipChatActivity no seu arquivo Manifest.xml conforme 
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
 ```
+
+# Passo 7
 
 Adicione a seguinte configuração da chamada do SDK na sua Activity conforme trecho kotlin abaixo:
 
