@@ -94,3 +94,67 @@ Dentro da propriedade dependences adicione a referência do SDK conforme abaixo:
 ```
 
 Após essas configurações clique em <b>Sync Now</b>
+
+Abaixo arquivo build.gradle completo após configurações:
+
+```
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'net.take.testesdk'
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "net.take.testesdk"
+        minSdk 23
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        profile {
+            initWith debug
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
+repositories {
+    maven { url "$projectDir/flutter_blip_chat_sdk/repo" }
+    maven { url "$storageUrl/download.flutter.io" }
+}
+
+dependencies {
+
+    implementation project(path: ':app:android_blip_chat_sdk')
+
+    debugImplementation  'blip.sdk.chat:flutter_debug:1.0'
+    profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
+    releaseImplementation 'blip.sdk.chat:flutter_release:1.0'
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+}
+```
