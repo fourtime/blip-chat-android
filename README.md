@@ -216,6 +216,8 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
         }
 ```
 
+O teste acima pode ser visualizado no projeto de teste https://github.com/fourtime/TesteSDK. 
+
 # Properties
 
 ## BlipChatModel
