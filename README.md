@@ -158,3 +158,14 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
 }
 ```
+
+Adicione a referência da BlipChatActivity no seu arquivo Manifest.xml conforme trecho abaixo:
+
+```xml
+        <activity
+            android:name="blip.chat.sdk.android.BlipChatActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+            android:hardwareAccelerated="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+```
