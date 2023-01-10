@@ -64,4 +64,4 @@ include ':app'
 include ':app:android_blip_chat_sdk'
 ```
 
-Após essas configurações clique em <Sync Now>
+Após essas configurações clique em <b>Sync Now</b>
