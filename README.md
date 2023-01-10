@@ -17,3 +17,19 @@ Descompacte o arquivo blip-chat-android-main.zip e copie as pastas descompactada
 ![alt text](https://github.com/fourtime/blip-chat-android/blob/main/imgs/3_-_EstruturaDePastas.png)<br/>
 3 - Estrutura de Pastas do Projeto
 
+Volte para seu projeto no Android Studio no arquivo settings.gradle e adicione as seguintes linhas na propriedade repositories do seu arquivo, conforme abaixo:
+
+```
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'flutter_blip_chat_sdk/repo' }
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
+    }
+```
+
+Ainda no arquivo settings.gradle, adicione uma última linha a referência para o projeto:
+
+```
+include ':app:android_blip_chat_sdk'
+```
