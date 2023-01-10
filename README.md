@@ -64,4 +64,33 @@ include ':app'
 include ':app:android_blip_chat_sdk'
 ```
 
+No arquivo build.gradle do seu app adicione o trecho abaixo acima da propriedade dependences:
+
+```
+String storageUrl = System.env.FLUTTER_STORAGE_BASE_URL ?: "https://storage.googleapis.com"
+repositories {
+    maven { url "$projectDir/flutter_blip_chat_sdk/repo" }
+    maven { url "$storageUrl/download.flutter.io" }
+}
+
+```
+
+Dentro da propriedade buildTypes adicione o seguinte trecho: 
+
+```
+        profile {
+            initWith debug
+        }
+```
+
+Dentro da propriedade dependences adicione a referência do SDK conforme abaixo:
+
+```
+    implementation project(path: ':app:android_blip_chat_sdk')
+
+    debugImplementation  'blip.sdk.chat:flutter_debug:1.0'
+    profileImplementation 'blip.sdk.chat:flutter_profile:1.0'
+    releaseImplementation 'blip.sdk.chat:flutter_release:1.0'
+```
+
 Após essas configurações clique em <b>Sync Now</b>
