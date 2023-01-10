@@ -178,7 +178,6 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
         var model = BlipChatModel()
         model.key = "{YOUR_OWNER_KEY}"
         model.type = TYPE.PLAIN
-        model.hostName = "akita-mtls.ws.0mn.io"
         model.useMtls = true
         var account = BlipChatAccountModel()
         account.fullName = "{LOGGED_USER_FULL_NAME}"
