@@ -241,7 +241,7 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 | showOwnerAvatar | NO | Determines if the owner avatar will be shown. Default: true | bool |
 | showUserAvatar | NO | Determines if the user avatar will be shown. Default: true | bool |
 
-##Authentication Type
+## Authentication Type
 | Property | Description |
 | :--- | :--- |
 | plain | Plain text authentication method |
