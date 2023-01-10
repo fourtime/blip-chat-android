@@ -169,3 +169,37 @@ Adicione a referência da BlipChatActivity no seu arquivo Manifest.xml conforme 
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:windowSoftInputMode="adjustResize" />
 ```
+
+Adicione a seguinte configuração da chamada do SDK na sua Activity conforme trecho kotlin abaixo:
+
+```kotlin
+        var button = findViewById<Button>(R.id.button)
+
+        var model = BlipChatModel()
+        model.key = "{YOUR_OWNER_KEY}"
+        model.type = TYPE.PLAIN
+        model.hostName = "akita-mtls.ws.0mn.io"
+        model.useMtls = true
+        var account = BlipChatAccountModel()
+        account.fullName = "{LOGGED_USER_FULL_NAME}"
+        account.photoUri = "{LOGGED_USER_AVATAR_URI}"
+        account.pushToken = "{DEVICE_PUSH_NOTIFICATION_TOKEN}"
+        model.account = account
+        var style = BlipChatStyleModel()
+        style.primary = "c9c8cc"
+        style.sentBubble = "a442f5"
+        style.receivedBubble = "706f73"
+        style.background = "7b42f5"
+        style.showOwnerAvatar = true
+        style.overrideOwnerColors = true
+        style.showUserAvatar = true
+        model.style = style
+
+        var blip = BlipChat(this, model)
+
+        button.setOnClickListener {
+            startActivity(
+                BlipChatActivity.withEngineDefault().build(blip, this)
+            )
+        }
+```
