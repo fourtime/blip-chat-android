@@ -203,9 +203,11 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
         }
 ```
 
-## Propriedades
+# Properties
 
-| Propriedade |	Requerido |	Descrição |	Tipo |
+## BlipChatModel
+
+| Properties |	Required |	Description |	Type |
 | :--- | :---: | :--- | :---: | 
 | key | YES | String key that identifies the owner | String |
 | type | YES | Indicates the authentication type, used to sign in the user | AuthenticationTypeEnum |
