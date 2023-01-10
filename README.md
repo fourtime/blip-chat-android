@@ -221,7 +221,7 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 * Required for external authentication type.
 
 ## BlipChat Account
-| Property	Required	Description	Type
+| Property | Required	Description | Type |
 | :--- | :---: | :--- | :---: | 
 | pushToken | NO | Logged user's device push notification Token | String |
 | fullName | NO | Logged user full name to be stored on Blip Account | String |
@@ -231,7 +231,7 @@ Adicione a seguinte configuração da chamada do SDK na sua Activity conforme tr
 
 
 ## BlipChat Style
-| Property	Required	Description	Type
+| Property | Required | Description	| Type |
 | :--- | :---: | :--- | :---: | 
 | primary | NO | Primary chat HEX color | String |
 | sentBubble | NO | Sent message bubble HEX color | String |
