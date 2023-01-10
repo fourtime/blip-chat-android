@@ -28,6 +28,12 @@ Volte para seu projeto no Android Studio no arquivo settings.gradle e adicione a
     }
 ```
 
+Altere o repositoriesMode para PREFER_SETTINGS conforme abaixo:
+
+```
+repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+```
+
 Ainda no arquivo settings.gradle, adicione uma última linha a referência para o projeto:
 
 ```
