@@ -39,3 +39,27 @@ Ainda no arquivo settings.gradle, adicione uma última linha a referência para 
 ```
 include ':app:android_blip_chat_sdk'
 ```
+
+Arquivo gradle completo do projeto de teste:
+
+```
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'flutter_blip_chat_sdk/repo' }
+        maven { url 'https://storage.googleapis.com/download.flutter.io' }
+    }
+}
+rootProject.name = "TesteSDK"
+include ':app'
+include ':app:android_blip_chat_sdk'
+```
